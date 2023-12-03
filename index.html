@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Sensitivity Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Minecraft Sensitivity Converter</h1>
+        <p class="note">Note: The sensitivity conversion may not be perfectly accurate. Feel free to adjust as needed.</p>
+        <label for="conversionType">Choose Conversion Type:</label>
+        <select id="conversionType" onchange="changeConversionType()">
+            <option value="javaToBedrock1.8.9">Java 1.8.9 to Bedrock</option>
+            <option value="bedrockToJava1.8.9">Bedrock to Java 1.8.9</option>
+            <option value="javaToBedrock1.13+">Java 1.13+ to Bedrock</option>
+            <option value="bedrockToJava1.13+">Bedrock to Java 1.13+</option>
+        </select>
+        <br>
+        <label for="inputNumber">Enter Sensitivity Value:</label>
+        <input type="number" id="inputNumber" step="0.01">
+        <br>
+        <button onclick="convert()">Convert</button>
+        <br>
+        <div id="result"></div>
+    </div>
+
+    <div class="color-effect"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
